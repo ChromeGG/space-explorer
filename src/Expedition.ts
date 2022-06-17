@@ -1,7 +1,7 @@
 import { Rocket } from './Rocket'
 import crypto from 'crypto'
 
-type ExpeditionStatus = 'READY' | 'IN PROGRES' | 'COMPLETED'
+type ExpeditionStatus = 'READY' | 'IN PROGRESS' | 'COMPLETED'
 
 const expeditionsResults = [
   `We found a new planet. We call it "${crypto
@@ -33,12 +33,12 @@ export class Expedition {
 
   launch() {
     if (this.status === 'READY') {
-      this.status = 'IN PROGRES'
+      this.status = 'IN PROGRESS'
     }
   }
 
   finish() {
-    if (this.status === 'IN PROGRES') {
+    if (this.status === 'IN PROGRESS') {
       this.status = 'COMPLETED'
       this.results = getResults()
 

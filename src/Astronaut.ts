@@ -6,11 +6,6 @@ export class Astronaut {
     this.name = name
   }
 
-  static create() {
-    const name = prompt('Name: ') || ''
-    return new Astronaut(name)
-  }
-
   printInfo() {
     return `
       Name: ${this.name}
